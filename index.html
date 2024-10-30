@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cifrado y Descifrado César</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <H1 class="text-lg-center">Encriptadon y Criptando andamos</H1>
-    <div class="container mt-5 bg-dark p-5 rounded">
-        <h2 class="text-center text-white">Cifrado y Descifrado César </h2>
-        
-        <div class="form-group">
-            <label class="font-weight-bold text-white" for="texto">Texto:</label>
-            <input type="text" class="form-control" id="texto" placeholder="Ingresa el texto" oninput="actualizarTexto()">
-        </div>
-        
-        <div class="form-group">
-            <label class="font-weight-bold text-white" for="desplazamiento">Desplazamiento:</label>
-            <input type="number" class="form-control" id="desplazamiento" value="3" oninput="actualizarTexto()">
+    <div class="d-flex p-4">
+        <div class="container mt-5 bg-dark p-5 rounded w-50 mr-2">
+            <h2 class="text-center text-white">Cifrado y Descifrado César </h2>
+
+            <div class="form-group">
+                <label class="font-weight-bold text-white" for="texto">Texto:</label>
+                <input type="text" class="form-control" id="texto" placeholder="Ingresa el texto"
+                    oninput="actualizarTexto()">
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold text-white" for="desplazamiento">Desplazamiento:</label>
+                <input type="number" class="form-control" id="desplazamiento" value="3" oninput="actualizarTexto()">
+            </div>
+
+            <h3 class="font-weight-bold text-white">Texto Cifrado:</h3>
+            <p class="border p-2 bg-white rounded" id="textoCifrado"></p>
+
+            <h3 class="font-weight-bold text-white">Texto Descifrado:</h3>
+            <p class="border p-2 bg-white rounded" id="textoDescifrado"></p>
         </div>
 
-        <h3 class="font-weight-bold text-white">Texto Cifrado:</h3>
-        <p class="border p-2 bg-white" id="textoCifrado"></p>
 
-        <h3 class="font-weight-bold text-white">Texto Descifrado:</h3>
-        <p class="border p-2 bg-white" id="textoDescifrado"></p>
+
+        <div class="container mt-5 bg-info rounded p-3 w-50">
+            <h2 class="text-center">Cifrado y Descifrado Vigenère</h2>
+
+            <div class="form-group">
+                <label for="texto1" class="font-weight-bold text-white">Texto:</label>
+                <input type="text" class="form-control " id="texto1" placeholder="Ingresa el texto"
+                    oninput="actualizarTexto1()">
+            </div>
+
+            <div class="form-group">
+                <label for="clave" class="font-weight-bold text-white">Clave:</label>
+                <input type="text" class="form-control" id="clave" placeholder="Ingresa la clave"
+                    oninput="actualizarTexto1()">
+            </div>
+
+            <h3 class="font-weight-bold text-white">Texto Cifrado:</h3>
+            <p  class="border p-2 bg-white rounded" id="textoCifrado3"></p>
+
+            <h3 class="font-weight-bold text-white">Texto Descifrado:</h3>
+            <p class="border p-2 bg-white rounded" id="textoDescifrado3"></p>
+        </div>
     </div>
 
 
@@ -33,9 +62,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="script.js">
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
